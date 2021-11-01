@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Chivo', sans-serif;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+  .main-title {
+    text-align: center;
+    font-size: 40px;
+    margin:30px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin: 20px;
+  }
+  
+  .drag-list {
+    display: flex;
+    align-items: flex-start;
+  }
+  .drag-column {
+    flex: 1;
+    margin: 0 10px;
+    position: relative;
+    background-color: #3A4663;
+    opacity: 0.9;
+    border-radius: 10px;
+    overflow-x: hidden;
+  }
+  
+  .backlog-column .header{
+    background-color: rgb(51, 21, 21);
+  }
+  
+  .progress-column .header {
+    background-color: rgb(100, 100, 236);
+  }
+  
+  .complete-column .header {
+    background-color: rgb(38, 194, 38);
+  }
+  
+  .on-hold-column .header{
+    background-color: rgb(221, 25, 25);
+  }
+  
+  
+  .custom-scroll {
+    overflow-y: auto;
+    max-height: 52vh;
+  }
+  
+  .custom-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-right: 5px;
+  }
+  
+  .custom-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .custom-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    opacity:0.9;
+  }
+  
+  .header h1 {
+    font-size: 20px;
+    padding:10px;
+  }
+  
+  .over {
+    padding: 50px 10px;
+  }
+  
+  .drag-item-list {
+    min-height: 50px;
+  }
+  
+  .drag-item {
+    margin: 10px;
+    padding: 10px;
+    height: fit-content;
+    background-color: #378187;
+    line-height: 25px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #FFF;
+  }
+  
+  .drag-item:focus {
+    outline: none;
+    background-color: white;
+    color: black;
+  }
+  
+  
+  .add-btn-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .add-btn {
+    margin: 10px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+  }
+  
+  .add-btn:hover {
+    color: #FFF;
+  }
+  span:hover{
+    color: #FFF;
+  } 
+  
+  .solid {
+    display: none;
+  }
+  
+  .solid:hover {
+    transition: unset;
+    filter: brightness(95%);
+    color: white;
+  }
+  
+  .plus-sign {
+    font-size: 25px;
+    margin-right: 5px;
+    position: relative;
+    top: -3px;
+  }
+  
+  .add-container {
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-height: 100px;
+    display: none;
+    opacity:0.9;
+  }
+  
+  .add-item {
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin: 5px auto;
+    resize: none;
+    color: black;
+    padding: 10px;
+  }
+  
+  .add-item:focus {
+    outline: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      overflow-y: auto;
+    }
+  
+    .container {
+      margin: 0;
+    }
+  
+    .drag-list {
+      display: block;
+    }
+  
+    .drag-column {
+      margin: 10px;
+    }
+  }
